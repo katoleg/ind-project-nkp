@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/project.css">
+    <title>Введите Ваши Данные</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td><img src="{{ url_for('static', filename='img/QR.jpg') }}" alt=""></td>
+            <td><h1 class="block">ЖИЗНЕННЫЙ ЦИКЛ ЛЕКАРСТВ<br>Обучение медицинских работников с контролем усвоения материала</h1></h1></td>
+        </tr>    
+    </table>
+    <table class="menu">
+        <tr>
+            <td width="140px"><a href="{{ url_for('index') }}" style="color:rgb(31, 9, 140); text-decoration: none;">Главная</a></td>
+            <td width="140px"><a href="{{ url_for('theory') }}" style="color:rgb(31, 9, 140); text-decoration: none;">Теория</a></td>
+            <td width="140px"><a href="{{ url_for('rules') }}" style="color:rgb(31, 9, 140); text-decoration: none;">Правила</a></td>
+            <td width="140px"><a href="{{ url_for('control') }}" style="color:brown; text-decoration: none;">Контроль</a></td>
+            <td width="140px"><a href="{{ url_for('about') }}" style="color:rgb(31, 9, 140); text-decoration: none;">О нас</a></td>
+        </tr>
+    </table>
+
+    <form action="{{ url_for('control') }}" method="POST">
+        <label for="first_name">Имя:</label>
+        <input type="text" id="first_name" name="first_name" required><br><br>
+        <label for="last_name">Фамилия:</label>
+        <input type="text" id="last_name" name="last_name" required><br><br>
+        <button type="submit">Начать Игру</button>
+    </form>
+</body>
+</html>

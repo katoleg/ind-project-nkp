@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Победа!</title>
+    <script>
+        function showAlert() {
+            alert("Победа!\nИгрок: {{ first_name }} {{ last_name }}\nКоличество ходов: {{ moves }}");
+        }
+    </script>
+</head>
+<body onload="showAlert()">
+    <h1>Поздравляем с Победой!</h1>
+    <p>Игрок: {{ first_name }} {{ last_name }}</p>
+    <p>Количество ходов: {{ moves }}</p>
+    <a href="{{ url_for('index') }}">Вернуться на главную</a>
+</body>
+</html>
