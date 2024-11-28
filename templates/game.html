@@ -3,9 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Игра - Карточки</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Контроль</title>
+    <link rel="stylesheet" href="static/style.css">
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
         .card {
             border: 1px solid #000;
             padding: 10px;
@@ -77,10 +83,8 @@
     </script>
 </head>
 <body>
-    <h1>Игра "Карточки"</h1>
-    <p>Фамилия и Имя Игрока: {{ first_name }} {{ last_name }}</p>
-    <p>Количество ходов: {{ moves }}</p>
-
+    <h1>Контроль знаний</h1>
+    <p>Количество попыток: {{ moves }}</p>
 
 
     <form id="cardsForm" action="{{ url_for('check_order') }}" method="POST">
